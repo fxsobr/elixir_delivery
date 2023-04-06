@@ -1,0 +1,18 @@
+defmodule Delivery.User do
+  use Ecto.Schema
+  import Ecto.Changeset
+
+  @primary_key {:id, :binary_id, autogenerate: true}
+
+  schema "users" do
+    field :address, :string
+    field :age, :integer
+    field :cep, :string
+    field :cpf, :string
+    field :email, :string
+    field :password_hash, :string
+    field :name, :string
+
+    timestamps()
+  end
+end
