@@ -5,6 +5,7 @@ defmodule DeliveryWeb.UsersController do
   alias DeliveryWeb.FallbackController
 
   action_fallback FallbackController
+
   def create(conn, params) do
     with {:ok, %User{} = user} <- Delivery.create_user(params) do
       conn
