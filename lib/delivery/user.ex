@@ -8,7 +8,7 @@ defmodule Delivery.User do
 
   @required_params [:address, :age, :cep, :cpf, :email, :password, :name]
 
-  @derive {Jason.Encoder, only: [:id, :age, :cpf, :address, :email]}
+  @derive {Jason.Encoder, only: [:id, :age, :cpf, :address, :email, :name]}
 
   schema "users" do
     field :address, :string
