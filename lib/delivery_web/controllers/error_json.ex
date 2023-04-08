@@ -7,6 +7,10 @@ defmodule DeliveryWeb.ErrorJSON do
     %{message: translate_errors(changeset)}
   end
 
+  def render("error.json", %{result: result}) do
+    %{message: result}
+  end
+
   def render(template, _assigns) do
     %{errors: %{detail: Phoenix.Controller.status_message_from_template(template)}}
   end
